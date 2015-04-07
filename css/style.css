@@ -11,14 +11,38 @@ body {
 }
 
 @keyframes title_animation_keyframes {
-    10%  { text-shadow: 0 0 7px rgba(255, 255, 255, 0.3); }
-    30%  { text-shadow: 0 0 7px rgba(255, 255, 0,   0.3); }
-    40%  { text-shadow: 0 0 7px rgba(0,   255, 0,   0.3); }
-    50%  { text-shadow: 0 0 7px rgba(0,   255, 255, 0.3); }
-    60%  { text-shadow: 0 0 7px rgba(0,   0,   255, 0.3); }
-    70%  { text-shadow: 0 0 7px rgba(255, 0,   255, 0.3); }
-    80%  { text-shadow: 0 0 7px rgba(255, 0,   0,   0.3); }
-    100% { text-shadow: 0 0 7px rgba(255, 255, 255, 0.3); }
+    10%  {
+        color: #ffffff;
+        text-shadow: 0 0 7px #ffffff;
+    }
+    30%  {
+        color: #fffff0;
+        text-shadow: 0 0 7px #ffff00;
+    }
+    40%  {
+        color: #f0ffa0;
+        text-shadow: 0 0 7px #00ff00;
+    }
+    50%  {
+        color: #f0ffff;
+        text-shadow: 0 0 7px #00ffff;
+    }
+    60%  {
+        color: #f0f0ff;
+        text-shadow: 0 0 7px #0000ff;
+    }
+    70%  {
+        color: #fff0ff;
+        text-shadow: 0 0 7px #ff00ff;
+    }
+    80%  {
+        color: #fff0f0;
+        text-shadow: 0 0 7px #ff0000;
+    }
+    100% {
+        color: #ffffff;
+        text-shadow: 0 0 7px #ffffff;
+    }
 }
 
 .title {
@@ -27,9 +51,9 @@ body {
     padding-top: 32px;
     padding-bottom: 30px;
     text-align: center;
-    color: #f0f0f0;
+    color: #ffffff;
     animation: title_animation_keyframes 10s infinite;
-    text-shadow: 0 0 7px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 7px #ffffff;
     background: rgba(255, 255, 255, 0.05);
 }
 
