@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic);
+
+@keyframes header_background_animation {
+    0%   { opacity: 1.0; background-size: 100% }
+    33%  { opacity: 1.0; background-size: 110% }
+    43%  { opacity: 0.0; background-size: 110% }
+    90%  { opacity: 0.0; background-size: 100% }
+    100% { opacity: 1.0; background-size: 100% }
+}
+
+body {
+
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+
+    header {
+
+        $picture_size: 500px;
+        $menu_size: 48px;
+        height: $picture_size + $menu_size;
+
+        .BIG_FUCKING_PICTURE {
+
+            $size: $picture_size;
+
+            width: 100%;
+            height: $size;
+            background: #d0d0d0;
+
+            .header_background {
+
+                $animation_duration: 27s;
+                position: absolute;
+                width: 100%;
+                height: $size;
+                filter: blur(2px);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 50% 20%;
+                background-attachment: fixed;
+
+                &:nth-child(1) {
+
+                    background-image: url(/img/header_background_0.png);
+                    animation: header_background_animation $animation_duration ease $animation_duration / 3 * 2 infinite;
+                    opacity: 1.0;
+
+                }
+
+                &:nth-child(2) {
+
+                    background-image: url(/img/header_background_1.png);
+                    animation: header_background_animation $animation_duration ease $animation_duration / 3 infinite;
+                    opacity: 0.0;
+
+                }
+
+                &:nth-child(3) {
+
+                    background-image: url(/img/header_background_2.png);
+                    animation: header_background_animation $animation_duration ease 0s infinite;
+                    opacity: 0.0;
+
+                }
+
+            }
+
+            h1 {
+
+                position: absolute;
+                height: $size;
+                width: 100%;
+                line-height: $size;
+                text-align: center;
+                margin: 0;
+                background: rgba(255, 255, 255, 0.5);
+                font-family: 'Lato', sans-serif;
+                font-weight: 100;
+                font-size: 128px;
+                text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+                cursor: default;
+
+                a.pale_black_dot {
+
+                    &::after {
+
+                        position: absolute;
+                        height: 1px;
+                        top: 72px;
+                        transition: 0.2s ease;
+                        content: 'Вы находитесь здесь';
+                        font-size: 14px;
+                        opacity: 0.0;
+                        color: red;
+
+                    }
+
+                    &:hover {
+
+                        color: red;
+
+                        &::after {
+
+                            opacity: 0.7;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        nav {
+
+            $size: $menu_size;
+
+            transition: 0.5s ease;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            height: $size;
+            background: #ffffff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+            a {
+
+                transition: 0.2s ease;
+                display: block;
+                float: left;
+                text-decoration: none;
+                height: $size;
+                line-height: $size;
+                padding: 0 $size;
+
+                &, &:visited {
+
+                    color: #a0a0a0;
+
+                }
+
+                &:hover {
+
+                    background: rgba(0, 0, 0, 0.05);
+
+                }
+
+            }
+
+            &.fixed {
+
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 0.95;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+            }
+
+        }
+
+    }
+
+}
