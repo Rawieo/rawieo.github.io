@@ -1,54 +1,31 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic);
-@keyframes header_background_animation {
-  0% {
-    opacity: 1.0;
-    background-size: 100%; }
-  33% {
-    opacity: 1.0;
-    background-size: 110%; }
-  43% {
-    opacity: 0.0;
-    background-size: 110%; }
-  90% {
-    opacity: 0.0;
-    background-size: 100%; }
-  100% {
-    opacity: 1.0;
-    background-size: 100%; } }
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic);
+* {
+  outline: none; }
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300; }
   body header {
     height: 548px; }
-    body header .BIG_FUCKING_PICTURE {
+    body header .header_picture {
       width: 100%;
       height: 500px;
       background: #d0d0d0; }
-      body header .BIG_FUCKING_PICTURE .header_background {
+      body header .header_picture .header_background {
         position: absolute;
         width: 100%;
         height: 500px;
-        filter: blur(2px);
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+        background-image: url(/img/header_background_0.png);
         background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: 50% 20%;
+        background-size: cover;
+        background-position: center;
         background-attachment: fixed; }
-        body header .BIG_FUCKING_PICTURE .header_background:nth-child(1) {
-          background-image: url(/img/header_background_0.png);
-          animation: header_background_animation 27s ease 18s infinite;
-          opacity: 1.0; }
-        body header .BIG_FUCKING_PICTURE .header_background:nth-child(2) {
-          background-image: url(/img/header_background_1.png);
-          animation: header_background_animation 27s ease 9s infinite;
-          opacity: 0.0; }
-        body header .BIG_FUCKING_PICTURE .header_background:nth-child(3) {
-          background-image: url(/img/header_background_2.png);
-          animation: header_background_animation 27s ease 0s infinite;
-          opacity: 0.0; }
-      body header .BIG_FUCKING_PICTURE h1 {
+      body header .header_picture h1 {
         position: absolute;
         height: 500px;
         width: 100%;
@@ -61,7 +38,7 @@ body {
         font-size: 128px;
         text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
         cursor: default; }
-        body header .BIG_FUCKING_PICTURE h1 a.pale_black_dot::after {
+        body header .header_picture h1 a.pale_black_dot::after {
           position: absolute;
           height: 1px;
           top: 72px;
@@ -70,9 +47,9 @@ body {
           font-size: 14px;
           opacity: 0.0;
           color: red; }
-        body header .BIG_FUCKING_PICTURE h1 a.pale_black_dot:hover {
+        body header .header_picture h1 a.pale_black_dot:hover {
           color: red; }
-          body header .BIG_FUCKING_PICTURE h1 a.pale_black_dot:hover::after {
+          body header .header_picture h1 a.pale_black_dot:hover::after {
             opacity: 0.7; }
     body header nav {
       transition: 0.5s ease;
@@ -102,5 +79,29 @@ body {
         right: 0;
         opacity: 0.95;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); }
+  body main {
+    padding: 16px 0px; }
+    body main section {
+      width: 80vw;
+      margin: auto; }
+      body main section .tiles {
+        display: flex;
+        justify-content: center; }
+        body main section .tiles .tile {
+          display: block;
+          float: left;
+          width: 250px;
+          height: 250px; }
+  body footer {
+    height: 64px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); }
+    body footer a.github_link {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url(/img/mark-github.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
 
 /*# sourceMappingURL=master.css.map */
