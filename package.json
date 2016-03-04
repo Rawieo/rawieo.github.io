@@ -1,9 +1,0 @@
-{
-    "name": "rawieogithubio",
-    "devDependencies": {
-        "grunt": "*",
-        "grunt-contrib-coffee": "*",
-        "grunt-contrib-sass": "*",
-        "grunt-contrib-watch": "*"
-    }
-}
