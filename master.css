@@ -56,7 +56,6 @@ main .content .links a {
 
 main .content .links a:hover { opacity: 1.0; }
 
-main .content .links a.gplus { background-image: url(img/gplus.svg);}
-main .content .links a.vk { background-image: url(img/vk.svg);}
+main .content .links a.telegram { background-image: url(img/telegram.svg);}
 main .content .links a.github { background-image: url(img/github.svg);}
 main .content .links a.twitch { background-image: url(img/twitch.svg);}
