@@ -1,54 +1,59 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100);
 
 body {
-    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 * { font-weight: 100; }
 
 main {
-    width: 1024px;
-    margin: auto;
-    position: relative;
+    width: 100vmin;
+    height: 50vmin;
 }
 
 main .image {
-    position: absolute;
     background: url(img/sad_white_ocelot.png);
-    background-repeat: no-repeat;
-    width: 512px;
-    height: 512px;
+    background-size: cover;
+    width: 50vmin;
+    height: 50vmin;
+    float: left;
 }
 
 main .content {
-    position: absolute;
-    right: 0;
-    width: 512px;
-    height: 512px;
+    float: left;
+    width: 50vmin;
+    height: 50vmin;
 }
 
 main .content h1 {
     margin: 0;
-    font-size: 128px;
-    line-height: 256px;
+    font-size: 12vmin;
+    line-height: 25vmin;
     text-align: center;
 }
 
 main .content .links {
     display: inline-flex;
-    justify-content: space-between;
-    width: 512px;
-    height: 256px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50vmin;
+    height: 25vmin;
 }
 
 main .content .links a {
     transition: 0.2s ease;
     opacity: 0.8;
-    width: 100%;
-    width: 128px;
-    height: 128px;
-    margin: 64px 32px;
+    width: 12vmin;
+    height: 12vmin;
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,4 +63,4 @@ main .content .links a:hover { opacity: 1.0; }
 
 main .content .links a.telegram { background-image: url(img/telegram.svg);}
 main .content .links a.github { background-image: url(img/github.svg);}
-main .content .links a.twitch { background-image: url(img/twitch.svg);}
+main .content .links a.steam { background-image: url(img/steam.svg);}
