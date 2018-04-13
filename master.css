@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Fira Sans', sans-serif;
-    width: 1000px;
+    width: 500px;
     margin: auto;
 }
 
@@ -25,9 +25,6 @@ body {
 }
 
 .links, .also-links {
-    text-align: center;
-}
-
-.links a, .also-links a {
-    margin: 0px 30px 0px 30px; 
+    display: flex;
+    justify-content: space-evenly;
 }
