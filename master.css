@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 
 body {
     margin: 0;
@@ -7,7 +7,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Code', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,20 +43,4 @@ main {
     display: block;
     height: 24px;
     line-height: 24px;
-}
-
-.about .contact::after {
-    content: attr(data-warn);
-    position: absolute;
-    left: 0;
-    right: 0;
-    white-space: nowrap;
-    background: white;
-    opacity: 0.0;
-    transition: 0.1s ease-in;
-    text-decoration: underline;
-}
-
-.about .contact:hover::after {
-    opacity: 1.0;
 }
